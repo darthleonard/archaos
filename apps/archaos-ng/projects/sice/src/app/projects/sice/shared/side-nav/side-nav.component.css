@@ -1,0 +1,53 @@
+.menuOpen {
+    box-shadow: 0px -5px 10px 1px rgba(0,0,0,0.5);
+    background-color: #3f51b5;
+    color: white;
+    height: 100%;
+    width: 230px;
+    transition: all 0.1s linear;
+    padding-top: 16px;
+  }
+  
+  .menuClose {
+    box-shadow: 0px -5px 10px 1px rgba(0,0,0,0.5);
+    background-color: #3f51b5;
+    color: white;
+    height: 100%;
+    width: 58px;
+    transition: all 0.1s linear;
+    padding-top: 16px;
+  }
+  
+  .vertical-menu {
+    border: 1px solid;
+    border-radius: 1em;
+    margin: 5px;
+    overflow: hidden;
+    height: 85%;
+  }
+  
+  .vertical-menu a {
+    color: white;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #7e8eeb;
+  }
+  
+  .vertical-menu a.active {
+    background-color: #303e8c;
+    color: white;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .aligned-with-icon{
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px; /* optional */
+  }

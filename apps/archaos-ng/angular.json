@@ -1,0 +1,125 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "sice": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/sice",
+      "sourceRoot": "projects/sice/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sice",
+            "index": "projects/sice/src/index.html",
+            "main": "projects/sice/src/main.ts",
+            "polyfills": "projects/sice/src/polyfills.ts",
+            "tsConfig": "projects/sice/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/sice/src/favicon.ico",
+              "projects/sice/src/assets"
+            ],
+            "styles": [
+              "projects/sice/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sice/src/environments/environment.ts",
+                  "with": "projects/sice/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sice:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sice:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sice:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sice/src/test.ts",
+            "polyfills": "projects/sice/src/polyfills.ts",
+            "tsConfig": "projects/sice/tsconfig.spec.json",
+            "karmaConfig": "projects/sice/karma.conf.js",
+            "assets": [
+              "projects/sice/src/favicon.ico",
+              "projects/sice/src/assets"
+            ],
+            "styles": [
+              "projects/sice/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sice/tsconfig.app.json",
+              "projects/sice/tsconfig.spec.json",
+              "projects/sice/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/sice/e2e/protractor.conf.js",
+            "devServerTarget": "sice:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sice:serve:production"
+            }
+          }
+        }
+      }
+    }
+    
+  },
+  "defaultProject": "sice"
+}

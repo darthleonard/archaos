@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: hidden;
+}
+
+.app-primary {
+  background-color: #3f51b5; /* theme primary color */
+  color: white;
+}
+
+.background-primary {
+  background-color: #3f51b5; /* theme primary color */
+}
