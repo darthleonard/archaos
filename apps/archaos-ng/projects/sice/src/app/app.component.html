@@ -1,3 +1,12 @@
 <app-toolbar [title]="title" (menuButtonClick)="toggleMenu()"></app-toolbar>
-<app-side-nav></app-side-nav>
-<router-outlet></router-outlet>
+
+<div class="main">
+    <div class="side-bar">
+        <app-side-nav></app-side-nav>
+    </div>
+    <div class="content">
+        <div class="section">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
