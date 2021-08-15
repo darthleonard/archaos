@@ -17,3 +17,7 @@ body {
 .background-primary {
   background-color: #3f51b5; /* theme primary color */
 }
+
+.cursor-pointer {
+  cursor: default;
+}

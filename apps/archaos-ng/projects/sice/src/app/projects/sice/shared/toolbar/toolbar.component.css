@@ -1,3 +1,17 @@
 div.app-primary {
   padding: 0.75em;
 }
+
+div.app-primary div {
+  display: inline-block;
+}
+
+.aligned-right {
+  float: right;
+}
+
+.aligned-with-icon {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 5px; /* optional */
+}

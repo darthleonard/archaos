@@ -9,7 +9,7 @@ import { SideNavComponent } from './projects/sice/shared/side-nav/side-nav.compo
 export class AppComponent {
   @ViewChild(SideNavComponent) sidenav: SideNavComponent;
   
-  title = 'sice';
+  title = 'SICE';
   
   toggleMenu() {
     this.sidenav.toggle();
