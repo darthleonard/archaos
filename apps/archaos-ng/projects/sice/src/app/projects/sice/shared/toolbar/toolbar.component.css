@@ -1,5 +1,9 @@
 div.app-primary {
   padding: 0.75em;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 div.app-primary div {
