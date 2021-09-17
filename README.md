@@ -22,9 +22,9 @@ npm run start:app_name
 -------------------------------------------------------------------------------------------------------------
 
   -- create api --
-dotnet new sln	take name of the current folder and create a solution file
-dotnet new webapi -o schoolapi	create webapi project on output directory
-dotnet sln add schoolapi	add project to solution
-dotnet dev-cetrs https --trust	Trust dotnet sdk certificate(windows & mac only)
-dotnet watch run	to listen every changes on the code
-dotnet new gitignonre	to generate fitignore file
+dotnet new sln	                    take name of the current folder and create a solution file
+dotnet new webapi -o schoolapi	    create webapi project on output directory
+dotnet sln add schoolapi	          add project to solution
+dotnet dev-cetrs https --trust	    Trust dotnet sdk certificate(windows & mac only)
+dotnet watch run	                  to listen every changes on the code
+dotnet new gitignore	              to generate fitignore file
